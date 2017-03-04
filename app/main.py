@@ -37,7 +37,7 @@ def move():
     snake = bottle.request.json(u'snakes')
     me = data[u'you']
     
-    #var = food[0]
+    var = food[0]
     
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']    
