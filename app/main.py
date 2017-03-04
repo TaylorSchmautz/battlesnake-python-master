@@ -38,25 +38,25 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    if ('turn' %4 == 0):
+    if data['turn'] %4 == 0:
         return{
                     'move': 'up',
                     'taunt': 'snake snake'
                 }
     
-     if ('turn' %4 == 1):
+       if data['turn'] %4 == 1:
         return{
                     'move': 'right',
                     'taunt': 'snake snake'
                 }
     
-     if ('turn' %4 == 2):
+     if data['turn'] %4 == 2:
         return{
                     'move': 'down',
                     'taunt': 'snake snake'
                 }
     
-     if ('turn' %4 == 3):
+      if data['turn'] %4 == 3:
         return{
                     'move': 'left',
                     'taunt': 'snake snake'
