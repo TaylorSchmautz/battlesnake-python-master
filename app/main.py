@@ -38,17 +38,13 @@ def move():
     me = data[u'you']
 
     # TODO: Do things with data
-    directions = ['up', 'down', 'left', 'right']
-    if data[u'snake'] == food:
-         return{
-                    'move': 'right',
-                    'taunt': 'snake snake'
-                }
+    directions = ['up', 'down', 'left', 'right'
+    return{
+        'move': 'right',
+        'taunt': 'snake snake'
+    }
 
-    else: 
-        return{
-            'move': 'right'
-        }   
+  
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
 if __name__ == '__main__':
