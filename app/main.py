@@ -38,11 +38,26 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    head_location = data[hear_url]
-    return{
-                'move': 'right',
-                'taunt': 'snake snake'
-            }
+    if 'turn'%4 = 0:
+        return{
+                    'move': 'up',
+                    'taunt': 'snake snake'
+                }
+     if 'turn'%4 = 1:
+        return{
+                    'move': 'right',
+                    'taunt': 'snake snake'
+                }
+     if 'turn'%4 = 2:
+        return{
+                    'move': 'down',
+                    'taunt': 'snake snake'
+                }
+     if 'turn'%4 = 3:
+        return{
+                    'move': 'left',
+                    'taunt': 'snake snake'
+                }
 
 
 # Expose WSGI app (so gunicorn can find it)
