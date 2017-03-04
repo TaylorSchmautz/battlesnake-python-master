@@ -42,11 +42,11 @@ def move():
     
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    if data['turn'] % 4 == 0:
-        return {
-            'move': 'up',
-            'taunt': 'battlesnake-python!'
-        }
+    #if data['turn'] % 4 == 0:
+     #   return {
+      #      'move': 'up',
+       #     'taunt': 'battlesnake-python!'
+        #}
     else
          return {
             'move': 'left',
