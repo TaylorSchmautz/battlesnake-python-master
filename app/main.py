@@ -36,16 +36,17 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-
-    return {
-        if head_url == board_width:
-            'move': 'right',
-            'taunt': 'snake snake'
-        else:
-            'move': 'right',
-            'taunt': 'snake snake'
-       
-    }
+    
+    if head_url == board_width:
+        return {
+                'move': 'right',
+                'taunt': 'snake snake'
+        }
+      else:
+            return{
+                'move': 'right',
+                'taunt': 'snake snake'
+            }
 
 
 # Expose WSGI app (so gunicorn can find it)
