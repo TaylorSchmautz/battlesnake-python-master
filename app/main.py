@@ -48,7 +48,7 @@ def move():
             'taunt': 'battlesnake-python!'
         }
     else
-        return {
+         return {
             'move': 'left',
             'taunt': 'battlesnake-python!'
         }
