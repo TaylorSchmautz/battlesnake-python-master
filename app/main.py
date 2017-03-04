@@ -15,7 +15,7 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    head_url = '%s://%s/static/head.png' % (
+    head_url = '%s://%s/gears.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -23,37 +23,52 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
+        'color': 'gold',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
-        'head_url': head_url,
-        'name': 'King snake AKA Owen'
+        'head_type': 'tongue',
+        'tail_type': 'fat-rattle',
+        'name': 'GodKing'
     }
 
 
 @bottle.post('/move')
 def move():
+    snakes = bottle.request.json[u'snakes']
     data = bottle.request.json
-    food = bottle.request.json(u'food')
-    snake = bottle.request.json(u'snakes')
-    me = data[u'you']
+    #food = bottle.request.json[u'food']
+    myID = data[u'you']
+    mysnake = [0]
     
-    var = food[0]
-    
-    # TODO: Do things with data
-    directions = ['up', 'down', 'left', 'right']    
-    if data['turn'] == 4:
-        return {
-            'move': 'up',
-            'taunt': 'battlesnake-python!'
-        }
-    else:
-        return {
-            'move': 'left',
-            'taunt': 'battlesnake-python!'
-        }
-    
+    for snake in snakes:
+        if snake[u'id'] == myID:
+            mysnake = snake
 
-  
+    # TODO: Do things with data
+    directions = ['up', 'down', 'left', 'right']
+    #directionsList = {'up': [0, -1], 'down': [0, 1], 'left': [-1, 0], 'right': [1, 0]}
+          
+    
+    if mysnake['health_points'] >= 30:
+        if data['turn'] % 4 == 0:
+            return {
+                'move': 'right'
+            }
+        if  data['turn'] % 4 == 1:
+            return {
+                'move': 'up',
+                'taunt': 'Suck it, Mech Eng rules'
+            }
+        if  data['turn'] % 4 == 2:
+            return {
+                'move': 'left'
+            }
+        if  data['turn'] % 4 == 3:
+            return {
+                'move': 'down'
+            }
+    else:
+        return { 'move': 'left' }
+    
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
 if __name__ == '__main__':
