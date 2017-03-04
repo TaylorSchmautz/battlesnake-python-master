@@ -41,13 +41,13 @@ def move():
     var
     
     # TODO: Do things with data
-    directions = ['up', 'down', 'left', 'right']
-    #if data['turn'] % 4 == 0:
-     #   return {
-      #      'move': 'up',
-       #     'taunt': 'battlesnake-python!'
-        #}
-    else
+    directions = ['up', 'down', 'left', 'right'     
+    if data['turn'] % 4 == 0:
+        return {
+            'move': 'up',
+            'taunt': 'battlesnake-python!'
+        }
+    else:
          return {
             'move': 'left',
             'taunt': 'battlesnake-python!'
