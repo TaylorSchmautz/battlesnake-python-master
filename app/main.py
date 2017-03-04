@@ -72,6 +72,15 @@ def move():
             return {
                 'move': 'down'
             } 
+        elif ffood[0] < mysnake[0]:
+            return {
+                'move': 'up'
+            }
+        else:
+            return{
+                'move': 'right'
+            }
+        
     
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
