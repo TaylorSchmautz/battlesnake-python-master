@@ -44,8 +44,7 @@ def move():
         else:
             'move': 'right',
             'taunt': 'snake snake'
-        :
-        
+       
     }
 
 
