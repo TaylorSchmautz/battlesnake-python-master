@@ -33,6 +33,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    food = bottle.request.json(u'food')
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
