@@ -36,8 +36,8 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    
-    if data[head_url] == board_width:
+    head_location = data[hear_url]
+    if head_location == board_width:
         return {
                 'move': 'right',
                 'taunt': 'snake snake'
