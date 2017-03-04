@@ -38,14 +38,21 @@ def move():
     me = data[u'you']
     
     var = food[0]
+    var
     
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
+    if data['turn'] % 4 == 0:
+        return {
+            'move': 'up',
+            'taunt': 'battlesnake-python!'
+        }
+    else
+        return {
+            'move': 'left',
+            'taunt': 'battlesnake-python!'
+        }
     
-    return {
-        'move': random.choice(directions),
-        'taunt': 'battlesnake-python!'
-    }
 
   
 # Expose WSGI app (so gunicorn can find it)
