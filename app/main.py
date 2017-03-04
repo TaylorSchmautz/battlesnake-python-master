@@ -38,7 +38,6 @@ def move():
     me = data[u'you']
     
     var = food[0]
-    var
     
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right'     
