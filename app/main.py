@@ -35,9 +35,10 @@ def start():
 def move():
     snakes = bottle.request.json[u'snakes']
     data = bottle.request.json
-    #food = bottle.request.json[u'food']
+    food = bottle.request.json[u'food']
     myID = data[u'you']
     mysnake = [0]
+    ffood = food[0]
     
     for snake in snakes:
         if snake[u'id'] == myID:
@@ -67,7 +68,10 @@ def move():
                 'move': 'down'
             }
     else:
-        return { 'move': 'left' }
+        if ffood[0] < mysnake[0]:
+            return {
+                'move': 'down'
+            } 
     
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
