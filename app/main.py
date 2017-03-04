@@ -38,10 +38,11 @@ def move():
     #me = data[u'you']
 
     # TODO: Do things with data
-    directions = ['up', 'down', 'left', 'right'
-    return{
-        'move': 'right',
-        'taunt': 'snake snake'
+    directions = ['up', 'down', 'left', 'right']
+    
+    return {
+        'move': random.choice(directions),
+        'taunt': 'battlesnake-python!'
     }
 
   
