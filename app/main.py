@@ -38,8 +38,14 @@ def move():
     directions = ['up', 'down', 'left', 'right']
 
     return {
-        'move': 'right',
-        'taunt': 'snake snake'
+        if head_url == board_width:
+            'move': 'right',
+            'taunt': 'snake snake'
+        else:
+            'move': 'right',
+            'taunt': 'snake snake'
+        :
+        
     }
 
 
