@@ -43,7 +43,7 @@ def move():
     for snake in snakes:
         if snake[u'id'] == myID:
             mysnake = snake
-
+    
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
     #directionsList = {'up': [0, -1], 'down': [0, 1], 'left': [-1, 0], 'right': [1, 0]}
@@ -68,11 +68,11 @@ def move():
                 'move': 'down'
             }
     else:
-        if ffood['coords.x'] < mysnake['coords.x']:
+        if ffood.x < mysnake['coords.x']:
             return {
                 'move': 'down'
             } 
-        elif ffood > mysnake:
+        elif ffood.x > mysnake:
             return {
                 'move': 'up'
             }
