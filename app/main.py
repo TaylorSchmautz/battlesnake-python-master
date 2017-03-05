@@ -68,7 +68,7 @@ def move():
                 'move': 'down'
             }
     else:
-        if ffood < mysnake:
+        if ffood['coords.x'] < mysnake:
             return {
                 'move': 'down'
             } 
