@@ -23,7 +23,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': 'gold',
+        'color': 'red',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_type': 'tongue',
         'tail_type': 'fat-rattle',
@@ -72,7 +72,7 @@ def move():
             return {
                 'move': 'down'
             } 
-        elif ffood[0] < mysnake[0]:
+        elif ffood[0] > mysnake[0]:
             return {
                 'move': 'up'
             }
