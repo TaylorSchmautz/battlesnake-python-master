@@ -68,11 +68,11 @@ def move():
                 'move': 'down'
             }
     else:
-        if ffood[0] < mysnake[0]:
+        if ffood < mysnake:
             return {
                 'move': 'down'
             } 
-        elif ffood[0] > mysnake[0]:
+        elif ffood > mysnake:
             return {
                 'move': 'up'
             }
