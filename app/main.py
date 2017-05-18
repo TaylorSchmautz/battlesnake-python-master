@@ -27,7 +27,7 @@ def start():
 		'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
 		'head_type': 'tongue',
 		'tail_type': 'fat-rattle',
-		'name': 'KingGod'
+		'name': 'King'
     	}
 
 
