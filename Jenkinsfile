@@ -1,1 +1,1 @@
-echo 'Rebuild Jenkins'
+echo 'Jenkins'
