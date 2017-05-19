@@ -1,1 +1,1 @@
-echo 'Jenkins'
+echo 'Jenkin'
