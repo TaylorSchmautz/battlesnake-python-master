@@ -1,1 +1,1 @@
-echo 'Jenkins webhook test'
+echo 'Jenkins webhook'
